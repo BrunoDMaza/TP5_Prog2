@@ -6,6 +6,7 @@ public class Titular {
     private String nombre;
     private String dni;
     private Pasaporte pasaporte;
+    
 
     public Titular(String nombre, String dni) {
         this.nombre = nombre;
@@ -14,7 +15,7 @@ public class Titular {
     
     public void setPasaporte (Pasaporte pasaporte){
         this.pasaporte = pasaporte;
-        if (pasaporte != null && titular.getPasaporte() != this) {
+        if (pasaporte != null && pasaporte.getTitular() != this) {
             pasaporte.setTitular(this);
         }
     }
@@ -39,6 +40,7 @@ public class Titular {
         return pasaporte;
     }
 
+    
       
             
     @Override
